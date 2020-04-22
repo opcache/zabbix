@@ -99,7 +99,7 @@ COPY ["zabbix-4.4.7/web/conf/etc/nginx/nginx.conf", "/etc/nginx/"]
 COPY ["zabbix-4.4.7/web/conf/etc/php7/php-fpm.conf", "/etc/php7/"]
 COPY ["zabbix-4.4.7/web/conf/etc/php7/conf.d/99-zabbix.ini", "/etc/php7/conf.d/"]
 COPY ["zabbix-4.4.7/web/docker-entrypoint.sh", "/usr/bin/"]
-COPY ["startup.sh", "/usr/bin/"]
+COPY ["zabbix-4.4.7/web/startup.sh", "/usr/bin/"]
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
