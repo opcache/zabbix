@@ -21,7 +21,7 @@ LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
 RUN apk add --no-cache mariadb mariadb-client mariadb-server-utils pwgen && \
     rm -f /var/cache/apk/*
 
-ADD mariadb-10.4.12/files/run.sh /scripts/run.sh
+ADD zabbix-3.4.15/mariadb-10.4.12/files /scripts
 RUN mkdir /docker-entrypoint-initdb.d && \
     mkdir /scripts/pre-exec.d && \
     mkdir /scripts/pre-init.d && \

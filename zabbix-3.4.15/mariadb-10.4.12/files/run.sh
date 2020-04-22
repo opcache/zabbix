@@ -97,4 +97,16 @@ do
 	fi
 done
 
-exec /usr/bin/mysqld --user=mysql --console --skip-name-resolve --skip-networking=0 $@
+exec /usr/bin/mysqld --user=mysql --console --skip-name-resolve --skip-networking=0 $@ &
+
+if [ -f "/run/mysqld/zabbix.pid" ]; then
+        echo "mysqld already zabbix, skipping creation"
+else
+        echo "mysqld zabbix not found, creating...."
+touch /run/mysqld/zabbix.pid
+sleep 10
+        zcat /scripts/zabbix.sql.gz | mysql --silent --skip-column-names \
+                    -h 127.0.0.1 -P 3306 \
+                    -u root --password="$MYSQL_ROOT_PASSWORD"  1>/dev/null
+fi
+/usr/bin/tail -f /dev/null
