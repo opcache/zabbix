@@ -1,4 +1,4 @@
-FROM opcache/zabbix:3.4.15agentd
+FROM opcache/zabbix:3.4.15-agent
 LABEL maintainer="aqzt.com (ppabc@qq.com)"
 
 ADD zabbix-3.4.15/server/root /
