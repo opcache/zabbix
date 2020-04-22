@@ -1,5 +1,5 @@
 
-# Thea项目基于Alpine系统下搭建zabbix server 欢迎访问 https://aq2.cn
+# Thea项目基于Alpine系统下搭建zabbix
 - 名字来源于希腊神话中的人物,西亚(Thea)：十二泰坦之一，海泼里恩之妻。
 
 ## 项目简介
