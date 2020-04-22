@@ -6,7 +6,7 @@ docker run --name zabbix-server-mysql -t \
       -e MYSQL_DATABASE="zabbix" \
       -e MYSQL_USER="zabbix" \
       -e MYSQL_PASSWORD="zabbix" \
-      -e MYSQL_ROOT_PASSWORD="zabbix" \
+      -e MYSQL_ROOT_PASSWORD="test123123" \
       -v /etc/localtime:/etc/localtime:ro \
       --net=host \
       -d opcache/zabbix:4.4.7-server
